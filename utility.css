@@ -23,6 +23,7 @@
 
 .bg-black {
     background-color: black;
+    color: white;
 }
 
 .bg-grey {
@@ -37,12 +38,72 @@
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
-  }
+}
 
 .rounded {
     border-radius: 7px;
 }
 
-.p-1{
+.p-1 {
     padding: 10px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    display: block;
+}
+
+/* For Webkit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust width as needed */
+}
+
+::-webkit-scrollbar-track {
+    background: #333; /* Dark background for the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Darker color for the thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+    border: 3px solid #333; /* Matches the track background */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Lighter color when hovering over the thumb */
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #888 #333; /* Thumb and track colors */
+}
+
+/* For Internet Explorer and Edge */
+body {
+    -ms-overflow-style: scrollbar; /* Shows scrollbar in IE/Edge */
+}
+
+body::-ms-scrollbar {
+    width: 12px; /* Adjust width as needed */
+}
+
+body::-ms-scrollbar-track {
+    background: #333; /* Dark background for the scrollbar track */
+}
+
+body::-ms-scrollbar-thumb {
+    background-color: #888; /* Darker color for the thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+    border: 3px solid #333; /* Matches the track background */
+}
+
+body::-ms-scrollbar-thumb:hover {
+    background-color: #555; /* Lighter color when hovering over the thumb */
 }
