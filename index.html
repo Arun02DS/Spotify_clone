@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spotify - Web Player: Music for everyone</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
 </head>
@@ -27,38 +27,19 @@
                         Your Library
                     </h2>
                 </div>
+                <div class="songlist">
+                    <ul>
+                        
+                    </ul>
+                </div>
                 <div class="footer">
-                    <div>
-                        <a href="https://www.spotify.com/in-en/legal/">
-                            <span>Legal</span>
-                        </a>
+                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
                     </div>
-                    <div>
-                        <a href="https://www.spotify.com/in-en/safetyandprivacy/">
-                            <span>Safety &amp; Privacy Center</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/">
-                            <span>Privacy Policy</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://www.spotify.com/in-en/legal/cookies-policy/">
-                            <span>Cookies</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">
-                            <span>About Ads</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://www.spotify.com/in-en/accessibility/">
-                            <span>Accessibility</span>
-                        </a>
-                    </div>
-
+                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
                 </div>
             </div>
         </div>
@@ -69,8 +50,8 @@
                     <img class="invert" src="right-button.svg" alt="right-button">
                 </div>
                 <div class="buttons">
-                    <button>SignUp</button>
-                    <button>Login</button>
+                    <button class="signupbtn">Sign Up</button>
+                    <button class="loginbtn">Log In</button>
                 </div>
             </div>
             <div class="SpotifyPlaylist">
@@ -103,10 +84,19 @@
                         <h3 class="truncate">An uplifting yet tasteful dinner playlist with a guaranteed feel good vibe.</h3>
                     </div>
                 </div>
+                <div class="playbar">
+                    <div class="songinfo"></div>
+                    <div class="songbuttons">
+                        <img src="previous.svg" alt="">
+                        <img src="play.svg" alt="">
+                        <img src="next.svg" alt="">
+                    </div>
+                    <div class="songtime"></div>
+                </div>
             </div>
         </div>
 
-        <script src=""></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

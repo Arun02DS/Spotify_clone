@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
+    font-size: 13px;
 }
 
 body{
@@ -20,6 +21,7 @@ body{
 .right{
     width: 75vw;
     margin: 16px 0;
+    position: relative;
 }
 
 
@@ -32,44 +34,54 @@ body{
     font-weight: bold;
 }
 
-.heading{
+.heading {
     display: flex;
-    width: 100%;
     gap: 15px;
-    padding-top: 14px;
-    padding: 23px 14px;
+    width: 100%;
+    padding: 10px 8px;
     font-weight: bold;
-    font-size: 13px;
     align-items: center;
+    font-size: 13px;
 }
 
-.library{
-    min-height: 80vh;
-    position: relative;
-}
-
-.heading img{
+.heading img {
     width: 30px;
 }
 
-.footer{
+.library {
+    min-height: 80vh;
     display: flex;
-    font-size: 10px;
-    gap: 13px;
-    color: gray;
-    position: absolute;
-    bottom: 0;
+    flex-direction: column;
+    padding: 23px 14px;
+    background-color: grey;
+    position: relative;
+    overflow: hidden; 
 }
 
-.footer a{
+.footer {
+    display: flex;
+    font-size: 6px;
+    color: grey;
+    gap: 8px;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    flex-wrap: wrap;
+
+}
+
+.footer a {
     color: grey;
     text-decoration: none;
+    white-space: nowrap;
 }
+
 
 .header{
     display: flex;
     justify-content: space-between;
     background-color: #101010;
+    height: 62px;
 }
 
 .header > *{
@@ -117,4 +129,86 @@ body{
     right: 17px;
     opacity: 1;
     transition: all 1s ease-out;
+}
+
+.buttons > *{
+    margin: 0 6px;
+}
+
+.signupbtn{
+    background-color: #101010;
+    color: #6a6a6a;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.signupbtn:hover{
+    font-size: 17px;
+    color: white;
+}
+
+.loginbtn{
+    background-color: white;
+    cursor: pointer;
+    width: 80px;
+    padding: 4px;
+    border-radius: 25px;
+    color: black;
+    font-size: 16px;
+}
+
+.loginbtn:hover{
+    color: rgb(59, 233, 20);
+}
+
+
+.playbar{
+    position: fixed;
+    bottom: 20px;
+    background-color:  rgb(42 151 42 / 25%);;
+    width: 70vw;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 36px;
+    display: flex;
+}
+
+.songlist{
+    height: 344px;
+    overflow: auto;
+    margin-bottom: 52px;
+}
+
+.songlist ul{
+    padding: 0 24px;
+}
+
+.songlist ul li{
+    list-style-type: decimal;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    padding: 6px 0;
+}
+
+.playnow{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.info div{
+    width: 84px;
+    font-size: 8px;
+}
+
+.playnow span{
+    font-size: 10px;
+    width: 50px;
 }
