@@ -1,31 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
     font-size: 13px;
 }
 
-body{
+body {
     background-color: black;
     color: white;
 }
 
-.left{
+.close {
+    display: none;
+}
+
+.left {
     width: 25vw;
     padding: 10px;
 }
 
-.right{
+.right {
     width: 75vw;
     margin: 16px 0;
     position: relative;
 }
 
 
-.home ul li{
+.home ul li {
     display: flex;
     width: 14px;
     gap: 15px;
@@ -55,7 +59,7 @@ body{
     padding: 23px 14px;
     background-color: grey;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .footer {
@@ -77,23 +81,23 @@ body{
 }
 
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     background-color: #101010;
     height: 62px;
 }
 
-.header > *{
+.header>* {
     padding: 20px;
 }
 
 
-.SpotifyPlaylist{
+.SpotifyPlaylist {
     padding: 16px;
 }
 
-.card-container{
+.card-container {
     margin: 30px;
     display: flex;
     gap: 10px;
@@ -103,7 +107,7 @@ body{
 
 }
 
-.card{
+.card {
     width: 200px;
     padding: 10px;
     border-radius: 5px;
@@ -111,17 +115,18 @@ body{
     transition: all .9s;
 }
 
-.card img{
+.card img {
     width: 100%;
     object-fit: contain;
 }
 
-.card h2, .card h3 {
+.card h2,
+.card h3 {
     max-width: 200px;
 }
 
 
-.play{
+.play {
     width: 28px;
     height: 28px;
     position: absolute;
@@ -131,11 +136,11 @@ body{
     transition: all 1s ease-out;
 }
 
-.buttons > *{
+.buttons>* {
     margin: 0 6px;
 }
 
-.signupbtn{
+.signupbtn {
     background-color: #101010;
     color: #6a6a6a;
     border: none;
@@ -145,12 +150,12 @@ body{
     font-weight: bold;
 }
 
-.signupbtn:hover{
+.signupbtn:hover {
     font-size: 17px;
     color: white;
 }
 
-.loginbtn{
+.loginbtn {
     background-color: white;
     cursor: pointer;
     width: 80px;
@@ -160,35 +165,36 @@ body{
     font-size: 16px;
 }
 
-.loginbtn:hover{
+.loginbtn:hover {
     color: rgb(59, 233, 20);
 }
 
 
-.playbar{
+.playbar {
     position: fixed;
     bottom: 20px;
-    background-color:  rgb(42 151 42 / 25%);;
+    background-color: rgb(42 151 42 / 25%);
+    ;
     width: 70vw;
     padding: 12px;
     justify-content: center;
     align-items: center;
     border-radius: 36px;
     display: flex;
-    height: 40px;
+    min-height: 40px;
 }
 
-.songlist{
+.songlist {
     height: 344px;
     overflow: auto;
     margin-bottom: 52px;
 }
 
-.songlist ul{
+.songlist ul {
     padding: 0 24px;
 }
 
-.songlist ul li{
+.songlist ul li {
     list-style-type: decimal;
     display: flex;
     gap: 8px;
@@ -196,25 +202,25 @@ body{
     padding: 6px 0;
 }
 
-.playnow{
+.playnow {
     display: flex;
     gap: 10px;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.info div{
+.info div {
     width: 84px;
     font-size: 8px;
 }
 
-.playnow span{
+.playnow span {
     font-size: 10px;
     width: 50px;
 }
 
-.seekbar{
+.seekbar {
     height: 2px;
     width: 90%;
     border: 2px solid green;
@@ -224,7 +230,7 @@ body{
     cursor: pointer;
 }
 
-.circle1{
+.circle1 {
     height: 13px;
     width: 13px;
     background-color: green;
@@ -235,22 +241,73 @@ body{
     transition: left 0.5s;
 }
 
-.songbuttons img{
+.songbuttons img {
     cursor: pointer;
 }
 
-.abovebar{
+.abovebar {
     display: flex;
     justify-content: space-between;
     width: 70vw;
 }
 
-.songinfo{
+.songinfo {
     width: 191px;
     height: 28px;
     overflow: hidden;
 }
 
-@media (max-width: 1400px) {
-    /* … */
-  }
+.hamburger {
+    display: none;
+}
+
+.close {
+    position: absolute;
+
+}
+
+@media (max-width: 431px) {
+    .left {
+        position: absolute;
+        left: -100%;
+        transition: all .3s;
+        z-index: 1;
+        width: 233px;
+        background-color: black;
+    }
+
+    .right {
+        width: 100vw;
+    }
+
+    .playbar {
+        width: 85vw;
+        display: block;
+    }
+
+    .abovebar{
+        width: 85vw;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .close {
+        display: block;
+        position: absolute;
+        right: 23px;
+        top: 25px;
+    }
+
+    .songinfo{
+        font-size: 10px;
+        width: 80px;
+    }
+
+    .songtime{
+        font-size: 13px;
+    }
+}
