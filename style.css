@@ -175,6 +175,7 @@ body{
     align-items: center;
     border-radius: 36px;
     display: flex;
+    height: 40px;
 }
 
 .songlist{
@@ -212,3 +213,44 @@ body{
     font-size: 10px;
     width: 50px;
 }
+
+.seekbar{
+    height: 2px;
+    width: 90%;
+    border: 2px solid green;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.circle1{
+    height: 13px;
+    width: 13px;
+    background-color: green;
+    border-radius: 50%;
+    bottom: 6px;
+    position: relative;
+    left: 0%;
+    transition: left 0.5s;
+}
+
+.songbuttons img{
+    cursor: pointer;
+}
+
+.abovebar{
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+}
+
+.songinfo{
+    width: 191px;
+    height: 28px;
+    overflow: hidden;
+}
+
+@media (max-width: 1400px) {
+    /* … */
+  }
