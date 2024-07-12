@@ -1,6 +1,12 @@
-
+let currentsong = new Audio()
+let songs;
 
 function convertSecondsToMinutes(seconds) {
+
+    if(isNaN(seconds) || seconds<0){
+        return "00:00"
+    }
+
     const totalSeconds = Math.floor(seconds); // Truncate to an integer
     const minutes = Math.floor(totalSeconds / 60);
     const remainingSeconds = totalSeconds % 60;
@@ -31,7 +37,6 @@ async function getsongs() {
     return songs
 }
 
-let currentsong = new Audio()
 
 const playmusic= (track,pause=false) =>{
     // let audio = new Audio("/songs/"+ track)
@@ -45,8 +50,8 @@ const playmusic= (track,pause=false) =>{
 }
 
 async function main() {
-    let songs = await getsongs()
-    console.log(songs)
+    songs = await getsongs()
+    // console.log(songs)
     playmusic(songs[0],true)
    
 
@@ -67,7 +72,6 @@ async function main() {
 
     Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e=>
         {e.addEventListener("click",element=>{
-            console.log(e.querySelector(".info").firstElementChild.innerHTML)
             playmusic(e.querySelector(".info").firstElementChild.innerHTML)
         })
  })
@@ -102,6 +106,30 @@ async function main() {
     document.querySelector(".close").addEventListener("click",e=>{
         document.querySelector(".left").style.left = "-100%"
     })
+
+    previous.addEventListener("click",()=>{
+        console.log("previous clicked")
+        let index = songs.indexOf(currentsong.src.split("/").slice(-1) [0])
+        console.log(songs,index)
+        if(index-1>=0){
+            playmusic(songs[index-1])
+        }
+    })
+
+    next.addEventListener("click",()=>{
+        console.log("next clicked")
+
+        let index = songs.indexOf(currentsong.src.split("/").slice(-1) [0])
+        console.log(songs,index)
+        if(index+1<songs.length){
+            playmusic(songs[index+1])
+        }
+    })
+
+    document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e)=>{
+        currentsong.volume = parseInt(e.target.value)/100
+    })
+ 
  
 }
 
